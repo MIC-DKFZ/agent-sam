@@ -5,7 +5,7 @@ setup(
     version='0.1.0',
     description='SAM wrapper for inferencing via MITK',
     author='Ashis Ravindran',
-    author_email='ashis.ravindran@dkfz.de',
+    author_email='ashis.ravindran@dkfz-heidelberg.de',
     url='mitk.org',
     packages=find_packages(include=['samrunner', 'samrunner.*']),
     install_requires=[
