@@ -11,7 +11,7 @@ Embeddings generated per file is cached for future use during the runtime.
 
 ## Installation
 ```bash
-pip install git+https://github.com/ASHISRAVINDRAN/sam-mitk.git
+pip install git+https://github.com/MIC-DKFZ/agent-sam.git
 ```
 Pip installing this will automatically install `Segment Anything` in the python virtual environment. Pretrained weights for the supported model type are downloaded automatically in the directory specified, if the checkpoint doesn't exist already.
 The code requires `Python>=3.8`, as well as `Pytorch>=1.7` and `torchvision>=0.8`. Please follow the instructions [here](https://pytorch.org/get-started/locally/) to install both PyTorch and TorchVision dependencies. Installing both PyTorch and TorchVision with CUDA support is strongly recommended.
