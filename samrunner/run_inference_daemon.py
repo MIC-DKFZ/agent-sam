@@ -70,9 +70,9 @@ class SAMRunner:
         '''
         if model_type == 'vit_h':
             url = 'https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth'
-        if model_type == 'vit_l':
+        elif model_type == 'vit_l':
             url = 'https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth'
-        if model_type == 'vit_b':
+        elif model_type == 'vit_b':
             url = 'https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth'
         else:
             raise Exception('Model type not supported')
