@@ -5,12 +5,14 @@ setup(
     version='0.1.0',
     description='SAM wrapper for inferencing via MITK',
     author='Ashis Ravindran',
-    author_email='ashis.ravindran@dkfz-heidelberg.de',
+    author_email='ashis.ravindran@dkfz.de',
     url='mitk.org',
     packages=find_packages(include=['samrunner', 'samrunner.*']),
     install_requires=[
-        'segment-anything @ git+https://github.com/facebookresearch/segment-anything.git@6fdee8f2727f4506cfbbe553e23b895e27956588',
+        'medsam @ git+https://github.com/bowang-lab/MedSAM.git@2b7c64cf80bf1aba546627db9b13db045dd1cbab',
         'SimpleITK>=2.2.1',
+        'requests==2.27.1;python_version<"3.10"',
+        'requests;python_version>="3.10"',
         'opencv-python>=4.7.0.72',
         'tqdm>=4.65.0'
     ],
@@ -19,11 +21,12 @@ setup(
             'Topic :: Scientific/Engineering',
             'Operating System :: Unix',
             'Operating System :: Microsoft :: Windows :: Windows 10'
-            'Programming Language :: Python :: 3.8'
             'Programming Language :: Python :: 3.9'
             'Programming Language :: Python :: 3.10'
+            'Programming Language :: Python :: 3.11'
+            'Programming Language :: Python :: 3.12'
             'Development Status :: 4 - Beta'
             'Environment :: GPU :: NVIDIA CUDA'
         ],
-    scripts=['samrunner/run_inference_daemon.py']
+    scripts=['samrunner/run_inference_daemon.py', 'samrunner/sam_runner.py', 'samrunner/base_runner.py', 'samrunner/medsam_runner.py']
 )
