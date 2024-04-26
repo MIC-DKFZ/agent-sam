@@ -1,4 +1,4 @@
-# Agent SAM (Segment Anything for MITK)
+# Agent SAM (Segment Anything & MedSAM for MITK)
 
 Copyright (c) [German Cancer Research Center (DKFZ)](https://www.dkfz.de). All rights reserved.
 Please make sure that your usage of this code is in compliance with its [license](LICENSE).
@@ -19,7 +19,7 @@ The code requires `Python>=3.8`, as well as `Pytorch>=1.7` and `torchvision>=0.8
 ## Usage
 The program can be used independent of MITK.
 ```bash
-python run_inference_daemon.py --input-folder ./input --output-folder ./output --trigger-file trigger.csv --model-type vit_b --checkpoint ./directory --device cuda
+python run_inference_daemon.py --input-folder ./input --output-folder ./output --trigger-file trigger.csv --model-type vit_b --checkpoint ./directory --device cuda --backend MedSAM
 ```
 
 ## License
