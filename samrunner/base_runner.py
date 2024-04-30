@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: BSD-3
 
 import os
+import sys
 import glob
 import SimpleITK as sitk
 import cv2
@@ -145,7 +146,7 @@ class BaseRunner:
             with requests.get(url, stream=True) as r:
                 file_size = int(r.headers.get('Content-Length', 0))
                 r.raise_for_status()
-                progress_bar = tqdm(total=file_size, unit='iB', unit_scale=True)
+                progress_bar = tqdm(total=file_size, unit='iB', unit_scale=True, file=sys.stdout)
                 with open(file_path, 'wb') as f:
                     for chunk in r.iter_content(chunk_size=8192):
                         progress_bar.update(len(chunk))
