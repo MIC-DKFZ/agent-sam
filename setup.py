@@ -10,6 +10,7 @@ setup(
     packages=find_packages(include=['samrunner', 'samrunner.*']),
     install_requires=[
         'medsam @ git+https://github.com/bowang-lab/MedSAM.git@2b7c64cf80bf1aba546627db9b13db045dd1cbab',
+        'numpy<2',
         'SimpleITK>=2.2.1',
         'requests==2.27.1;python_version<"3.10"',
         'requests;python_version>="3.10"',
