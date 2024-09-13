@@ -8,6 +8,8 @@ import argparse
 from base_runner import BaseRunner
 from sam_runner import SAMRunner
 from medsam_runner import MedSAMRunner
+import warnings
+warnings.filterwarnings("ignore")
 
 parser = argparse.ArgumentParser(description="Runs embedding generation on an input image or directory of images. "
                                              "Requires SimpleITK. Saves resulting embeddings as .pth files.")
